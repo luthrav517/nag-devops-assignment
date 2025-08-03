@@ -1,0 +1,14 @@
+version: '3.3'
+services:
+  nagp_user_service_app:
+    container_name: nagp-user-service
+    restart: always
+    ports:
+      - 8080:8080
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+    image: nagp_user_service_app:TAG_NAME
+    environment:
+      - SPRING_PROFILES_ACTIVE=PROFILE_NAME
+    network_mode: bridge

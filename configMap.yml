@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: nagp-user-service-configmap-dev
+data:
+  datasourceUrl: "jdbc:postgresql://postgres:5432/postgres"
+  datasourceDriverClassName: "org.postgresql.Driver"
+  datasourceDialect: "org.hibernate.dialect.PostgreSQLDialect"
